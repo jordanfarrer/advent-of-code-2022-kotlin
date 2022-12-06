@@ -6,6 +6,8 @@ import java.io.File
 fun readInput(name: String) = File("src", "$name.txt")
     .readLines()
 
+fun readInputAsString(name:String) = File("src","$name.txt").readText()
+
 fun <T> MutableList<T>.push(item: T) = this.add(this.count(), item)
 fun <T> MutableList<T>.pop(): T? = if(this.isNotEmpty()) this.removeAt(this.count() - 1) else null
 fun <T> MutableList<T>.peek(): T? = if(this.isNotEmpty()) this[this.count() - 1] else null
